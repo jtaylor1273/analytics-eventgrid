@@ -15,7 +15,7 @@ Key Azure services that are part of their solution:
 
 ## Solution - Reference Architecture
 The diagram below describes the overview of the architecture and highlights the different components of the solution.
-![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/solution.png)
+![Solution Diagram](/images/solution.png)
 
 The website resources were all inside of a single resource group called websiterg.  The Event Grid subscription will monitor the Production Azure Subscription for changes to the websiterg resource groups.  
 
@@ -31,13 +31,13 @@ The solution was setup using the following process
 ## Configure Solution
 The solution was configured using the following processes
 * Build the Azure Function App with an Event Grid Trigger
-* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/function.png)
+* ![Solution Diagram](/images/function.png)
 * Build an Event Grid Subscription tracking all changes to a resource group.  The Event Grid subscription shows 52 events being generated. 
-* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/subscription.png)
+* ![Solution Diagram](/images/subscription.png)
 * Made change to the targeted resource group and received a hit on the Azure Function as noted in screen capture below.  The screen capture shows the Azure Function App was triggered 23 times.  The difference between the number of generated events and successfully triggered Function calls is a result of me working through an issue.
-* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/monitor.png)
+* ![Solution Diagram](/images/monitor.png)
 * The HTTP trigger initiates the Logic App to send an email to the administrators of the website.
-* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/logicapp1.png)
+* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/images/logicapp1.png)
 
 
 ## Change/Update Solution
@@ -46,7 +46,7 @@ The change/update process is as follows
 * The Azure Function can be modified by going into the Azure Portal
 * Search for Azure App
 * Select the appropriate Trigger and modify the code
-* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/tree/master/images/trigger.png)
+* ![Solution Diagram](https://github.com/jtaylor1273/analytics-eventgrid/images/trigger.png)
 
 ## Delete Solution
 Since all resources for this solution are created under the same resource group, deleting the resource group will delete Event Grid Subscription and Azure Function App.
